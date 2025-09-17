@@ -1,0 +1,172 @@
+.sidebar-6 {
+  --width-open: 260px;
+  --width-closed: 64px;
+}
+
+.page.sidebar-6-page {
+  background: #474bb7;
+  flex: 1;
+}
+
+.sidebar-6 button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebar-6 {
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 30px;
+  width: var(--width-closed);
+  border-radius: 16px;
+  background: #1a1a36;
+  transition: width 0.3s;
+}
+
+.sidebar-6:hover {
+  width: var(--width-open);
+}
+
+.sidebar-6 .toggle-btn {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  right: -12px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #373153;
+  color: #8f8d9b;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  transition: 0.3s;
+}
+
+.sidebar-6 .toggle-btn:hover {
+  color: #f9f9f9;
+}
+
+.sidebar-6:hover .toggle-btn {
+  rotate: 180deg;
+}
+
+.sidebar-6 .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-6 .header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: var(--width-closed);
+  padding: 0 20px;
+  background: rgb(0 0 0 / 15%);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: 0.3s;
+}
+
+.sidebar-6:hover .header {
+  width: var(--width-open);
+}
+
+.sidebar-6 .header h1 {
+  margin-left: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.sidebar-6 .logo {
+  height: 28px;
+}
+
+.sidebar-6 .menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.sidebar-6 .menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 56px;
+  width: 6px;
+  background: #656aff;
+  translate: 0 var(--top);
+  transition: 0.3s;
+}
+
+.sidebar-6 .menu button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 56px;
+  width: var(--width-closed);
+  font-family: "Poppins";
+  font-size: 17px;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 0 22px;
+  color: #9193b3;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.sidebar-6:hover .menu button {
+  width: var(--width-open);
+}
+
+.sidebar-6 .menu button.active {
+  color: #f9f9f9;
+  background: rgb(255 255 255 / 3%);
+  opacity: 1;
+}
+
+.sidebar-6 .menu button:not(.active):hover {
+  background: rgb(255 255 255 / 2%);
+  opacity: 0.9;
+}
+
+.sidebar-6:hover .menu .active {
+  cursor: default;
+}
+
+.sidebar-6 .menu button:hover > span {
+  opacity: 1;
+}
+
+.sidebar-6 .menu button p,
+.sidebar-6 .header h1 {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar-6 .menu button:hover p {
+  transition: 0.1s;
+}
+
+.sidebar-6:hover :is(.sidebar-6 .menu button p, .sidebar-6 .header h1) {
+  opacity: 1;
+}
+
+.sidebar-6 .menu button > img {
+  width: 24px;
+  height: 24px;
+}

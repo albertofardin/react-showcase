@@ -1,0 +1,142 @@
+:root {
+  --color1: #59c3ff;
+  --color2: rgb(255, 184, 107);
+  --bg: #f6f8fb;
+  --fg: #1c1f23;
+  --muted: #6b7583;
+  --outline: rgba(0, 0, 0, 0.08);
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.showcase {
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.showcase {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  min-height: 0;
+  flex: 1 1 auto;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  min-height: 0;
+  width: 100%;
+}
+
+.showcase-panel {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  max-width: 225px;
+  min-width: 225px;
+}
+.showcase-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.showcase-header-avatar {
+  width: 50px;
+  height: 50px;
+  background-image: url("./assets/afardin_avatar.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  margin: 0 10px;
+}
+.showcase-header-body {
+  display: flex;
+  flex-direction: column;
+}
+.showcase-header-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--fg);
+}
+.showcase-header-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.showcase-list {
+  margin: 10px 0 0 0;
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  list-style: none;
+  padding: 8px;
+  overflow: auto;
+  min-height: 0;
+  flex: 1;
+}
+.showcase-listitem {
+  width: 100%;
+  text-align: left;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.showcase-listitem:hover {
+  background: rgba(255, 184, 107, 0.25);
+}
+.showcase-listitem.is-active {
+  background: rgba(89, 195, 255, 0.25);
+  font-weight: 600;
+}
+.showcase-preview {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  border: 1px solid var(--outline);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  align-items: stretch;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  background: #000000;
+  font-family: "Euclid Circular A", "Poppins";
+  color: #fdfdfd;
+  position: relative;
+}

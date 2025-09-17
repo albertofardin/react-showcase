@@ -1,0 +1,54 @@
+.welcome {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  width: inherit;
+  position: relative;
+  background: linear-gradient(to right, #eb017c 0%, #7301ff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-card {
+  padding: 10px 40px 40px 40px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 490px;
+  text-align: center;
+}
+
+.welcome-logo {
+  width: 440px;
+  height: 200px;
+  background-image: url("../../assets/afardin_logo.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-title {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #eb017c;
+  font-weight: 500;
+}
+
+.welcome-description {
+  font-size: 12px;
+}
